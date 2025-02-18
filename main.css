@@ -63,8 +63,10 @@ body {
 
 .content h1 {
     font-size: 3rem;
-    margin: 10px 0;
+    margin: 30px 0; /* Didesnis tarpas virš ir po */
     position: relative;
+    font-weight: 400; /* Šiek tiek storesnės raidės */
+    letter-spacing: 5px; /* Didesni tarpai tarp raidžių */
 }
 
 
@@ -76,17 +78,16 @@ body {
     height: 2px;
     background: #fff;
     left: 0;
-    top: -15px;
+    top: -25px; /* Padidintas tarpas tarp teksto ir linijos */
 }
 
-.content h1::after {
-    display: none;
-}
+
 
 .content p {
     font-size: 1.2rem;
     max-width: 80%;
     position: relative;
+    margin-bottom: 50px; /* Dar didesnis tarpas po paragrafo */
 }
 
 .content p::after {
@@ -96,7 +97,7 @@ body {
     height: 2px;
     background: #fff;
     left: 0;
-    bottom: -10px;
+    bottom: -20px; /* Didesnis tarpas tarp teksto ir linijos */
 }
 
 .buttons {
