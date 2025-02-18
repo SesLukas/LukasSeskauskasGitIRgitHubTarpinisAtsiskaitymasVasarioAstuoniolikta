@@ -9,10 +9,14 @@ body, html {
     text-align: center;
     overflow: hidden;
 }
-
 body {
     background: url('./resources/bg.jpg') no-repeat center center/cover;
-    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -21,18 +25,24 @@ body {
     align-items: center;
 }
 
-.container {
-    position: relative;
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .overlay {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
 }
 
 .gem-icon {
@@ -49,60 +59,137 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 90%;
-    max-width: 900px;
-    padding: 20px;
 }
 
 .content h1 {
     font-size: 3rem;
-    margin: 20px 0;
+    margin: 10px 0;
     position: relative;
+}
+
+
+
+.content h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    top: -15px;
+}
+
+.content h1::after {
+    display: none;
 }
 
 .content p {
     font-size: 1.2rem;
-    max-width: 90%;
+    max-width: 80%;
     position: relative;
-    text-align: center;
-    margin: auto;
+}
+
+.content p::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: -10px;
 }
 
 .buttons {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 20px;
     width: 100%;
-    max-width: 900px;
-    gap: 20px;
 }
 
-.buttons button {
+.tab-btn {
+    background: transparent;
     border: 1px solid #fff;
     padding: 15px 30px;
-    background: transparent;
     color: #fff;
-    font-size: 1rem;
     cursor: pointer;
+    margin: 10px;
     transition: background 0.3s;
+    font-size: 1.2rem;
 }
 
-.buttons button:hover {
+.tab-btn:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
+@media (min-width: 769px) {
+    .background {
+        background: url('./resources/bg.jpg') no-repeat center center/cover;
+        height: 100vh;
+    }
+}
+
 @media (max-width: 768px) {
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
     .content p {
         font-size: 1rem;
         max-width: 90%;
-        text-align: left;
-        margin-left: 5%;
-        white-space: normal;
     }
 
-    .buttons {
-        flex-direction: column;
-        align-items: center;
+    .tab-btn {
+        width: 80%;
+        font-size: 1rem;
     }
+}
+    .tab {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.tab-content img, .tab-content video {
+    max-width: 100%;
+    height: auto;
+}
+.hover-link {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+.hover-link:hover {
+    color: #f0a500;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn img {
+    width: 30px;
+    transition: transform 0.3s ease-in-out;
+    display: block; 
+}
+
+.close-btn:hover img {
+    transform: rotate(90deg);
 }
