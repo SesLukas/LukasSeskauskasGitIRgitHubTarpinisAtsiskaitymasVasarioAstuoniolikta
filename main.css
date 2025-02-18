@@ -12,16 +12,7 @@ body, html {
 
 body {
     background: url('./resources/bg.jpg') no-repeat center center/cover;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.container {
-    position: relative;
+    background-size: cover;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -30,14 +21,18 @@ body {
     align-items: center;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.container {
+    position: relative;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: -1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    display: none;
 }
 
 .gem-icon {
@@ -54,30 +49,20 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100%;
-    height: auto;
+    width: 90%;
     max-width: 900px;
+    padding: 20px;
 }
 
 .content h1 {
     font-size: 3rem;
-    margin: 10px 0;
+    margin: 20px 0;
     position: relative;
-}
-
-.content h1::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    left: 0;
-    top: -15px;
 }
 
 .content p {
     font-size: 1.2rem;
-    max-width: 80%;
+    max-width: 90%;
     position: relative;
     text-align: center;
     margin: auto;
@@ -85,23 +70,39 @@ body {
 
 .buttons {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     margin-top: 40px;
     width: 100%;
     max-width: 900px;
-}
-@media (max-width: 768px) {
-.content p {
-font-size: 1rem;
-max-width: 90%;
-text-align: left;
-margin-left: 5%;
-white-space: normal;
+    gap: 20px;
 }
 
-.buttons {
-flex-direction: column;
-align-items: center;
+.buttons button {
+    border: 1px solid #fff;
+    padding: 15px 30px;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
 }
+
+.buttons button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .content p {
+        font-size: 1rem;
+        max-width: 90%;
+        text-align: left;
+        margin-left: 5%;
+        white-space: normal;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
 }
