@@ -84,10 +84,10 @@ body {
 .content h1::before {
     content: "";
     position: absolute;
-    width: 160%; /* Didesnis ilgis */
+    width: 235%; /* Didesnis ilgis */
     height: 2px; /* Linijos storis */
     background: #fff;
-    left: -30%; /* Centruojame ilgesnę liniją */
+    left: -67%; /* Centruojame ilgesnę liniją */
     top: -50px; /* Aukščiau nei tekstas */
 }
 .content h1::after {
