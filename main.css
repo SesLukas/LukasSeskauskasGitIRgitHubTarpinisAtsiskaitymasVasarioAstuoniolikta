@@ -123,6 +123,16 @@ body {
     width: 100%;
     position: relative;
 }
+.buttons::before {
+    content: "";
+    position: absolute;
+    width: 2px; /* Linijos storis */
+    height: 50px; /* Linijos ilgis – keisk pagal poreikį */
+    background: white; /* Linijos spalva */
+    top: -50px; /* Reguliuoja aukštį, kad susijungtų su horizontalia linija */
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 .tab-btn {
     background: transparent;
