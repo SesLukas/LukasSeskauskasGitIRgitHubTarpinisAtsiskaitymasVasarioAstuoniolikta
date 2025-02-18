@@ -46,11 +46,11 @@ body {
 }
 
 .gem-icon {
-    width: 80px;
+    width: 35px;
     margin-bottom: 20px;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     border-radius: 50%;
-    padding: 10px;
+    padding: 30px;
 }
 
 .content {
@@ -63,10 +63,10 @@ body {
 
 .content h1 {
     font-size: 3rem;
-    margin: 30px 0; /* Didesnis tarpas virš ir po */
+    margin: 30px 0; 
     position: relative;
-    font-weight: 400; /* Šiek tiek storesnės raidės */
-    letter-spacing: 5px; /* Didesni tarpai tarp raidžių */
+    font-weight: 400; 
+    letter-spacing: 5px; 
 }
 
 
@@ -78,7 +78,7 @@ body {
     height: 2px;
     background: #fff;
     left: 0;
-    top: -25px; /* Padidintas tarpas tarp teksto ir linijos */
+    top: -25px; 
 }
 
 
@@ -87,7 +87,7 @@ body {
     font-size: 1.2rem;
     max-width: 80%;
     position: relative;
-    margin-bottom: 50px; /* Dar didesnis tarpas po paragrafo */
+    margin-bottom: 50px; 
 }
 
 .content p::after {
@@ -97,7 +97,7 @@ body {
     height: 2px;
     background: #fff;
     left: 0;
-    bottom: -20px; /* Didesnis tarpas tarp teksto ir linijos */
+    bottom: -20px; 
 }
 
 .buttons {
@@ -116,7 +116,7 @@ body {
     cursor: pointer;
     margin: 0;
     transition: background 0.3s;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 .tab-btn:hover {
