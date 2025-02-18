@@ -9,6 +9,11 @@ body, html {
     text-align: center;
     overflow: hidden;
 }
+body {
+    background: url('./resources/bg.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+}
 
 .container {
     position: relative;
@@ -36,7 +41,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     z-index: -1;
 }
 
@@ -65,7 +70,13 @@ body, html {
 
 
 .content h1::before {
-    top: -20px;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    top: -15px;
 }
 
 .content h1::after {
