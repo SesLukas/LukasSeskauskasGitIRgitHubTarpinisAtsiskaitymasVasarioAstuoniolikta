@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #000;
     color: #fff;
+    text-align: center;
 }
 
 .container {
@@ -31,14 +32,22 @@ body {
     z-index: -1;
 }
 
+.gem-icon {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
 .buttons {
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tab-btn {
     background: transparent;
     border: 1px solid #fff;
-    padding: 10px 20px;
+    padding: 15px 30px;
     color: #fff;
     cursor: pointer;
     margin: 5px;
@@ -58,7 +67,8 @@ body {
     background: rgba(0, 0, 0, 0.9);
     padding: 20px;
     border-radius: 10px;
-    width: 60%;
+    width: 90%;
+    max-width: 500px;
     text-align: center;
 }
 
@@ -89,4 +99,34 @@ body {
 .hover-link:hover {
     color: #f0a500;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    .gem-icon {
+        width: 50px;
+        margin-bottom: 10px;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .tab-btn {
+        width: 90%;
+        margin: 5px 0;
+        padding: 15px;
+        font-size: 1.2em;
+    }
+    .tab {
+        width: 90%;
+        max-width: 400px;
+    }
 }
