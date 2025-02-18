@@ -8,7 +8,58 @@
     <title>Document</title>
 </head>
 <body>
-    <section></section>
+    <body>
+        <div class="container">
+            <div class="background">
+                <img src="./resources/bg.jpg" alt="Background" class="bg-image">
+                <div class="overlay"></div>
+            </div>
+            <div class="content">
+                <h1>METAVERSE</h1>
+                <p>INNOVATION THAT WILL SHAPE HOW WE CONNECT IN THE WORLD AN OPPORTUNITY FOR EVERYBODY.</p>
+                <div class="buttons">
+                    <button onclick="openTab('intro')">INTRO</button>
+                    <button onclick="openTab('work')">WORK</button>
+                    <button onclick="openTab('about')">ABOUT</button>
+                    <button onclick="openTab('contact')">CONTACT</button>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div id="intro" class="tab">
+            <div class="tab-content">
+                <button class="close-btn" onclick="closeTab('intro')">&times;</button>
+                <h2>INTRO</h2>
+                <video controls>
+                    <source src="./resources/tab-1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        
+        <div id="work" class="tab">
+            <div class="tab-content">
+                <button class="close-btn" onclick="closeTab('work')">&times;</button>
+                <h2>WORK</h2>
+                <img src="./resources/tab-2.jpg" alt="Work">
+            </div>
+        </div>
+    
+        <div id="about" class="tab">
+            <div class="tab-content">
+                <button class="close-btn" onclick="closeTab('about')">&times;</button>
+                <h2>ABOUT</h2>
+                <img src="tab-3.jpg" alt="About">
+            </div>
+        </div>
+    
+        <div id="contact" class="tab">
+            <div class="tab-content">
+                <button class="close-btn" onclick="closeTab('contact')">&times;</button>
+                <h2>CONTACT</h2>
+                <img src="tab-4.jpg" alt="Contact">
+            </div>
+        </div>
     
 </body>
 </html>
